@@ -9,11 +9,12 @@ import ChatListItem from '@/components/ChatListItem';
 
 
 
+
 export default function Home() {
   const imagem = 'https://us.123rf.com/450wm/gmast3r/gmast3r1710/gmast3r171002485/88771602-avatar-perfil-%C3%ADcone-masculino-sem-rosto-usu%C3%A1rio-em-colorido-redondo-plano-de-fundo-ilustra%C3%A7%C3%A3o.jpg'
 
 
-  const [chatList, setChatList] = useState([{}, {}, {}, {}])
+  const [chatList, setChatList] = useState([{}, {}, {},{},{},{},{},{},{},{},{}, {}])
 
   return (
     <div className="app-window" >
