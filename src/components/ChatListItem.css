@@ -10,6 +10,9 @@
     
 
 }
+.chatListItem.active{
+    background-color: #EBEBEB;
+}
 
 
 .chatListItem-avatar{
