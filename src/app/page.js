@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import ChatListItem from '@/components/ChatListItem';
 import ChatIntro from '@/components/ChatIntro';
 import ChatWIndow from '@/components/ChatWindow'
+import NewChat from '@/components/NewChat';
 
 
 
@@ -26,11 +27,18 @@ export default function Home() {
   
     const [activeChat, setActiveChat] = useState({})
 
+    const [user,setUser] = useState({
+      id: "123",
+      avatar: imagem,
+      name: 'Breno Oliveira'
+    })
+
   return (
     <div className="app-window" >
       <div className="sidebar">
+        <NewChat />
         <header>
-          <img className="header-avatar" src={imagem} alt="avatar" />
+          <img className="header-avatar" src={user.avatar} alt="avatar" />
           <div className="header-buttons">
 
             <div className="header-bttn">
@@ -79,7 +87,7 @@ export default function Home() {
         </div>
       </div>
       <div className="content-area">
-        {activeChat.chatId !== undefined ? <ChatWIndow /> : <ChatIntro />}
+        {activeChat.chatId !== undefined ? <ChatWIndow user={user} /> : <ChatIntro />}
       </div>
     </div>
   );
